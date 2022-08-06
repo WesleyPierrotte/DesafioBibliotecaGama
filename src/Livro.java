@@ -3,6 +3,10 @@ public class Livro {
     private Autor autor;
     private int edicao;
 
+    public Livro(String titulo) {
+        this.titulo = titulo;
+    }
+
     public Livro(String titulo, String ano, String editora, String isbn, Autor autor, int edicao) {
         this.titulo = titulo;
         this.ano = ano;
@@ -70,14 +74,31 @@ public class Livro {
         titulo = novoTitulo;
     }
 
-    public String TituloLivro(String tituloLivro){
-        if(getTitulo().equals(tituloLivro) == true){
-            System.out.println("O livro " +tituloLivro+ "existe na biblioteca ");
+    public String ListarLivroCadastrado(String listarLivro){
+        getTitulo().equals(listarLivro);
+        return listarLivro;
+    }
+
+    public String ConsultaTituloLivro(String tituloLivro){
+        if(getTitulo().equals(tituloLivro)){
+            System.out.println("O livro " +tituloLivro+ " existe na biblioteca ");
         }else{
             System.out.println("não existe o livro na biblioteca");
         }
         return tituloLivro;
 
+    }
+
+    public String ConsultaAutor(String consAutor) {
+        if (autor.getNome().equals(consAutor)) {
+            System.out.println("O nome do Autor " + consAutor + " consta na biblioteca  // Por favor, consulte pelo livro desejado");
+        } else {
+            System.out.println("O nome do auto não consta na biblioteca");
+        }
+        return consAutor;
+
+        /* O segundo metodo para resolver essa questão seria, criar uma arraylist colocando todos os livros criados
+         * e criar um metodo, onde fosse consultado o arraylist e o seu Autor */
     }
 
 }

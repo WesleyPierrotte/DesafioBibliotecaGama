@@ -16,9 +16,12 @@ public class Main {
         livro1 = new Livro("Gama Desafio","2022","HEADBUG","1234",new Autor("HEADBUG",1234567)
                 ,1);
 
+        Livro livro2;
+        livro1 = new Livro("Gama Desafio 2","2023","HEADBUG","1234",new Autor("HEADBUG",1234567)
+                ,4);
+
         livro1.exibirLivro();
-        livro1.alterarLivro("Novo nome do Livro");
-        livro1.exibirLivro();
+
 
         // se o usuário não entregar na data determinada? O usuário será bloqueado ou acrescentará mais tempo?
 
@@ -27,7 +30,12 @@ public class Main {
 
         usuario1.UsuarioCadastrado(151587561);
 
-        livro1.TituloLivro("Gama Desafio");
+        livro1.ConsultaTituloLivro("Gama Desafio");
+
+        livro1.alterarLivro("Gama desafio part 2");
+        livro1.ConsultaAutor("HEADBUG");
+
+
 
         teclado.close();
     }
