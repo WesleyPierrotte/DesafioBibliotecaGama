@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
 
         Usuario usuario1;
-        usuario1 = new Usuario("21 999487289","23",true,
+        usuario1 = new Usuario("21 999487289","23",false,
                 new Pessoa("HEADBUG USER ONE",151587561));
 
         usuario1.exibirUsuario();
@@ -21,6 +24,12 @@ public class Main {
 
         Exemplar exemplar1;
         exemplar1 = new Exemplar(01, true, false);
+
+        usuario1.UsuarioCadastrado(151587561);
+
+        livro1.TituloLivro("Gama Desafio");
+
+        teclado.close();
     }
 
 

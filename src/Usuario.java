@@ -43,9 +43,19 @@ public class Usuario extends Pessoa{
 
     public void usuarioDebito() {
         // Se for verdadeiro, o usuário não pode emprestar livro
-        if(status = true) {
+        if(status == true) {
             System.out.println("O Usuário não pode alugar livro, pois existe pendências de entrega!!!");
+        }else{
+            System.out.println("Pode alugar o livro!!!");
         }
+    }
+    public int UsuarioCadastrado(int newCpf){
+        if(pessoa.getCpf() == newCpf){
+            System.out.println("O usuário valido, pode fazer consulta");
+        }else{
+            System.out.println("Usuário não existe no sistema");
+        }
+        return newCpf;
     }
 
 }
